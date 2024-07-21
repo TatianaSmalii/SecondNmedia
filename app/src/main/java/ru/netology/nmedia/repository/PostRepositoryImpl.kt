@@ -32,7 +32,7 @@ class PostRepositoryImpl : PostRepository {
         val response = call.execute()
         val body = requireNotNull(response.body)
         val responseText = body.string()
-        return gson.fromJson(responseText, typeToken)
+        return gson.fromJson(responseText, typeToken.type)
     }
 
     override fun save(post: Post): Post {
