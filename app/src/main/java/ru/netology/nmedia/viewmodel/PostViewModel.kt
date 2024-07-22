@@ -70,7 +70,7 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     // функция сохранения изменений при редактировании поста
-    fun editPost(content: String) {
+    fun editPost(content: String) {//
         // trim = обрезка пробелов в конце/спереди
         val text = content.trim()
         // если изменений не было: очистка edited, выход из фукнции
