@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
+//import android.widget.PopupMenu
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -42,7 +42,7 @@ class NewPostFragment : Fragment() {
             viewModel.savePost()
             viewModel.clearDraft()
             AndroidUtils.hideKeyboard(requireView())
-            findNavController().navigateUp()
+
         }
         viewModel.postCreated.observe(viewLifecycleOwner) {
             viewModel.loadPosts()
